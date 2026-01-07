@@ -42,8 +42,8 @@ select:focus {
 /* ==================== 페이지 구조 ==================== */
 .page {
   width: 210mm;
-  height: 297mm;    
-  padding: 15px 20px;
+  height: auto !important;
+  min-height: 297mm;    
   margin: 10mm auto;
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -246,8 +246,6 @@ select:focus {
 
 .orange_table {
   border-collapse: collapse;
-  width: 180mm !important;
-  max-width: 180mm !important;
   table-layout: fixed;
 }
 
@@ -305,11 +303,11 @@ select:focus {
 }
 
 .main-wrapper .from_left .orange_2 {
-  padding: 59px 0;
+  padding: 61px 0;
 }
 
 .main-wrapper .from_left .orange_3 {
-  padding: 36px 0;
+  padding: 35px 0;
 }
 
 .main-wrapper .from_left .side_gray {
@@ -329,7 +327,7 @@ select:focus {
 }
 
 .main-wrapper .from_left .gray_2 {
-  padding: 13px 3px;
+  padding: 12px 3px;
 }
 
 .from_right {
@@ -339,6 +337,7 @@ select:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border: 1px solid #898989;
   border-radius: 5px;
   padding: 15px 4px;
@@ -402,19 +401,19 @@ select:focus {
 
 .form_row td:nth-child(1),
 .form_row td:nth-child(3) {
-  width: 18%;
+  width: 15%;
   text-align: right;
   padding: 2px 5px;
 }
 
 .form_row td:nth-child(2) {
-  width: 32%;
+  width: 30%;
   padding-left: 5px;
 }
 
 .form_row td:nth-child(4) {
   width: 32%;
-  padding: 0 6px;
+  padding-left: 3px;
 }
 
 /* ===== 특정 input 너비 클래스 ===== */
@@ -434,8 +433,8 @@ select:focus {
   width: 50% !important;
 }
 
-.input_width_60 {
-  width: 60% !important;
+.input_width_70 {
+  width: 70% !important;
 }
 
 /* 열두 번째 행 특정 td 너비 */
@@ -453,12 +452,14 @@ select:focus {
 
 /* 열두 번째 행 내부 요소 스타일 */
 .row_12_td4 .input_line {
-  width: 75px !important;
+  width: 168px !important;
 }
 
 .row_12_td4 .small_text {
-  font-size: 7px !important;
-  line-height: 1.2 !important;
+  font-size: 6.5px !important;
+  line-height: 1.1 !important;
+  width: 125px;
+  white-space: normal;   
 }
 
 /* colspan이 있는 셀의 배경색 처리 */
@@ -530,11 +531,16 @@ select:focus {
   background: transparent;
   /* padding: 2px 3px; */
   box-sizing: border-box;
-  font-size: 10px;
   height: 18px;
   line-height: 18px;
   padding: 0 3px;
   overflow: visible;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.input_line_s {
+  font-size: 9px;
 }
 
 .input_tiny {
@@ -551,7 +557,7 @@ select:focus {
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  margin-right: 5px;
+  margin-right: 3px;
   font-size: 9px;
   white-space: nowrap;
 }
@@ -736,6 +742,11 @@ select:focus {
   border-radius: 3px;
 }
 
+/* consent_orange 안의 마지막 행 보더 제거 */
+.consent_orange .consent-table tr:last-child td {
+  border-bottom: none;
+}
+
 .consent-table {
   width: 100%;
   border-collapse: collapse;
@@ -792,14 +803,15 @@ select:focus {
 }
 
 .notice_text_cell {
-  width: 75%;
+  width: 65%;
   padding-right: 12px;
-  font-size: 9px;
-  line-height: 1.5;
+  line-height: 1.2;
+  font-size: 12px;
+  word-break: keep-all;
 }
 
 .notice_sign_cell {
-  width: 25.2%;
+  width: 35%;
   text-align: right;
 }
 
@@ -874,6 +886,11 @@ p.color_text {
   flex-direction: column;
 }
 
+.code_num {
+  width: 35%;
+  padding: 4px;
+}
+
 .branch_font {
   font-size: 8px;
   color: #91908f
@@ -912,28 +929,41 @@ p.color_text {
 }
 
 /* ==================== 출력 스타일 ==================== */
+/* ===============================
+   PRINT RESET (SCREEN = PRINT)
+   =============================== */
+
 @page {
   size: A4;
-  margin: 0;
+  margin: 0 auto;
 }
 
 @media print {
+
+  /* 1. 브라우저 자동 색상/보정 차단 */
   * {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-  body {
-    background: white;
-    margin: 0;
-    padding: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
+  /* 2. html / body 기준 고정 */
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #fff !important;
+    font-size: 10px;
+    line-height: 1 !important;
+  }
+
+  /* 3. 페이지 래퍼 */
   .page {
     width: 210mm;
     height: 297mm;
-    margin: 0;
-    padding: 8mm 10mm;
-    box-shadow: none;
+    margin: 0 auto !important;
+    padding: 2mm 5mm !important;
+    box-shadow: none !important;
     page-break-after: always;
   }
 
@@ -941,70 +971,116 @@ p.color_text {
     page-break-after: auto;
   }
 
-  /* 섹션이 페이지 중간에서 잘리지 않도록 */
+  /* 4. 페이지 분할 방지 (⚠️ consent-section은 제외) */
   .orange_section,
-  .consent-section,
   .main-wrapper {
     page-break-inside: avoid;
   }
 
-  /* 입력 필드 출력 스타일 */
-  input[type="text"],
-  input[type="radio"],
-  input[type="checkbox"],
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
+  /* 오른쪽 사이드바(SKT/KT 연락처) 인쇄 시 표시 */
+  .from_right {
+    display: flex !important;
   }
 
-  /* 체크박스/라디오 버튼 출력 */
+  /* 테이블 래퍼가 남은 공간 채우도록 */
+  .table_wrapper {
+    flex: 1 !important;
+  }
+
+  /* 🔥 동의 영역은 섹션 전체가 아니라 '행 단위'만 보호 */
+  .consent-section {
+    page-break-inside: auto;
+  }
+
+  .consent-table tr,
+  .final_notice_table tr,
+  .date_table tr,
+  .footer_info_table tr {
+    page-break-inside: avoid;
+  }
+
+  /* 5. 테이블 레이아웃 안정화 */
+  table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+  }
+
+  /* 인쇄 시 화면과 동일하게 유지 - 패딩/높이 변경 안함 */
+
+  /* 7. 입력 필드 (텍스트) */
+  input[type="text"],
+  select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+
+  /* 8. 체크박스 / 라디오 : 인쇄 시에도 표시 */
   input[type="checkbox"],
   input[type="radio"] {
+    -webkit-appearance: auto !important;
+    appearance: auto !important;
+    display: inline-block !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .print-check {
     width: 10px;
     height: 10px;
     border: 1px solid #333;
-    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  input[type="checkbox"]:checked::before {
-    content: '✓';
+  .print-check.checked::after {
+    content: "✓";
     font-size: 8px;
-    position: absolute;
-    top: -2px;
-    left: 1px;
+    line-height: 1;
   }
 
-  input[type="radio"] {
+  .print-radio {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
     border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  input[type="radio"]:checked::before {
-    content: '';
-    width: 5px;
-    height: 5px;
+  .print-radio.checked::after {
+    content: "";
+    width: 4px;
+    height: 4px;
     background: #333;
     border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
   }
 
-  /* 배경색 출력 강제 */
+  /* 9. 동의 영역 여백 정리 */
+  .agree-row,
+  .agree-row td,
+  .agree-row li {
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* 10. 색상 강조 요소 */
   .badge-yellow,
   .badge-pink,
   .form_color,
   .consent-section,
-  .from_left {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
+  .from_left,
   .side_color,
   .orange_section {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }
 

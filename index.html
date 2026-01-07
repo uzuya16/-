@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>후불 이동전화 가입신청서</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="contract_1.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body> <!-- ==================== 페이지 1 ==================== -->
+<body> 
+<!-- ==================== 페이지 1 시작==================== -->
   <div class="page page-1">
     <!-- ====== 헤더 영역 ====== -->
     <header class="header">
@@ -172,8 +174,8 @@
                   </label>
                   <label class="radio_inline">
                     <input type="radio" name="bill_type" value="email"> 이메일(
-                    <input type="email" class="input_line input_width_30"> @
-                    <input type="email" class="input_line input_width_30"> )
+                    <input type="email" class="input_line_s input_width_40"> @
+                    <input type="email" class="input_line_s input_width_40"> )
                   </label>
                 </td>
               </tr>
@@ -217,7 +219,7 @@
                     <span class="label_divider"></span>
                   </div>
                 </td>
-                <td class="nowrap"> <input type="text" class="input_line input_width_60"> <label
+                <td class="nowrap"> <input type="text" class="input_line input_width_70"> <label
                     class="checkbox_inline"> <input type="checkbox"> 가입자와 동일 </label> </td>
                 <td>
                   <div class="field_label">
@@ -227,7 +229,7 @@
                   </div>
                 </td>
                 <td class="nowrap"> <input type="text" class="input_line input_width_50"> <span>(관계 : </span> <input
-                    type="text" class="input_width_30"> <span>)</span> </td>
+                    type="text" class="input_width_30 input_line_s"> <span>)</span> </td>
               </tr>
               <!-- 여섯 번째 행 -->
               <tr class="form_row form_color">
@@ -267,7 +269,7 @@
                     <span class="label_divider"></span>
                   </div>
                 </td>
-                <td colspan="3"> <input type="text" class="input_line input_width_60"> <span class="ml_20">유효기간 (</span>
+                <td colspan="3"> <input type="text" class="input_line input_width_70"> <span class="ml_20">유효기간 (</span>
                   <input type="text" class="input_tiny"> <span>년</span> <input type="text" class="input_tiny"> <span>월
                     )</span>
                 </td>
@@ -300,7 +302,8 @@
                       value="prepaid">
                     선불 </label> <label class="radio_inline"> <input type="radio" name="payment_type" value="postpaid">
                     후불
-                  </label> <input type="text" class="input_phone" placeholder="01X-XXXX-XXXX"> </td>
+                  </label> <input type="text" class="input_phone input_line" placeholder="01X-XXXX-XXXX">
+                </td>
                 <td>
                   <div class="field_label">
                     변경전 통신사
@@ -312,7 +315,7 @@
                   <label class="radio_inline"><input type="radio" name="prev_carrier"> KT</label> <label
                     class="radio_inline"><input type="radio" name="prev_carrier"> LGU+</label> <label
                     class="radio_inline"> <input type="radio" name="prev_carrier" value="MVNO"> 알뜰폰 (<input type="text"
-                      class="input_width_25">) </label>
+                      class="input_width_30 input_line_s">) </label>
                 </td>
               </tr>
               <!-- 열 번째 행 -->
@@ -369,9 +372,13 @@
                   </div>
                 </td>
                 <td class="row_12_td4">
-                  <div class="field_inline"> <input type="text" class="input_line"> <label class="radio_inline"> <input
-                        type="radio" name="usim_type" value="esim"> eSIM </label> <span class="small_text"> ※eSIM 단말의
-                      경우, 개통에 필요한 사업자 인증정보 다운로드<br>수수료 2,750원(부가세포함)이 다음달 요금에 합산 청구됩니다. </span> </div>
+                  <div class="field_inline"> <input type="text" maxlength="20" class="input_line" > 
+                    <label class="radio_inline"> 
+                        <input type="radio" name="usim_type" value="esim"> eSIM </label> 
+                        <span class="small_text"> 
+                        ※eSIM 단말의 경우, 개통에 필요한 사업자 인증정보 다운로드 수수료 2,750원(부가세포함)이 다음달 요금에 합산 청구됩니다. 
+                        </span> 
+                    </div>
                 </td>
               </tr>
             </table>
@@ -387,9 +394,9 @@
               </td>
               <td class="nowrap">
                 <span>모델명:</span>
-                <input type="text" class="input_line input_width_40">
+                <input type="text" class="input_line input_width_30">
                 <span>일련번호:</span>
-                <input type="text" class="input_line input_width_40">
+                <input type="text" class="input_line input_width_50" maxlength="16">
               </td>
               <td>
                 <div class="field_label">
@@ -423,7 +430,7 @@
               <td>
                 <div class="field_inline"> <label class="radio_inline"> <input type="radio" name="extra_service"
                       value="internet"> 무선인터넷 차단신청 </label> <label class="radio_inline"> <input type="radio"
-                      name="extra_service" value="other"> 기타 ( <input type="text" class="input_width_60">
+                      name="extra_service" value="other"> 기타 ( <input type="text" class="input_width_70">
                     ) </label> </div>
               </td>
             </tr>
@@ -467,7 +474,7 @@
                 </div>
               </td>
               <td>
-                <input type="text" class="input_line" placeholder="eSIM 개통시 필수 기재">
+                <input type="text" class="input_line" maxlength="33" placeholder="eSIM 개통시 필수 기재">
               </td>
               <td colspan="2" class="esim_notice">
                 <span class="small_text">※ eSIM 다운로드 비용 2,750원 (후 청구)</span>
@@ -737,14 +744,14 @@
           <td class="branch_cell">
             <div class="branch_box form_color">
               <div class="branch_text">
-                <div class="text">
-                  <span>접수처 관리코드</span>
+                <div class="text code_num">
+                  <span class="sign_label">접수처 관리코드</span>
                   <span class="branch_font">Branch Office</span>
                 </div>
                 <input type="text" class="branch_p">
               </div>
               <div class="branch_text">
-                <p>접수자 번호</p>
+                <p class="code_num sign_label">접수자 번호</p>
                 <input type="text" class="branch_p">
               </div>
             </div>
@@ -764,9 +771,11 @@
       <div class="page_number">8-1</div>
     </section>
   </div>
-  <!-- ==================== 페이지 1 끝 ==================== -->
-  <!-- ==================== 페이지 2 ==================== -->
-  <div class="page page-2"> </div> <!-- ==================== 페이지 2 끝 ==================== -->
+<!-- ==================== 페이지 1 끝 ==================== -->
+<!-- ==================== 페이지 2 시작==================== -->
+  <div class="page page-2">
+  </div> 
+<!-- ==================== 페이지 2 끝 ==================== -->
 </body>
 
 </html>
