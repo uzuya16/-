@@ -1,3 +1,57 @@
+/*  숨겨진 내용(상단 통신사/ 오른쪽 사이드 통신사 전화번호,팩스번호/하단 회사이름) */
+
+
+.carrier_top {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 9px;
+  visibility: hidden;
+}
+
+.carrier_side {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 6px 4px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 8px;
+  visibility: hidden;
+} 
+/* 
+통신사 색상
+৹KT  
+배경색 background: #EA2424;  글자색 color: #fff;
+
+৹SKT  
+배경색 background: #F6C810;  글자색 color: #2F2B2C;
+
+৹LGT 
+배경색 background: #315397;  글자색 color: #fff;
+*/
+
+.service_center {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  line-height: 1.4;
+  color: #444;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.service_center_t {
+  visibility: hidden;
+}
+
+.company {
+  visibility: hidden;
+}
+
+
+
+
 /* ==================== 기본 설정 ==================== */
 * {
   margin: 0;
@@ -84,24 +138,6 @@ select:focus {
   gap: 3px;
   cursor: pointer;
   color: #9D9FA2;
-}
-
-.badge {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 9px;
-  color: white;
-}
-
-.badge-yellow {
-  background: #F6C810;
-  color: #2F2B2C;
-}
-
-.badge-pink {
-  background: #EA2424;
 }
 
 .title {
@@ -299,11 +335,11 @@ select:focus {
 }
 
 .main-wrapper .from_left .orange_1 {
-  padding: 28px 0;
+  padding: 30px 0;
 }
 
 .main-wrapper .from_left .orange_2 {
-  padding: 61px 0;
+  padding: 60px 0;
 }
 
 .main-wrapper .from_left .orange_3 {
@@ -317,23 +353,19 @@ select:focus {
   text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 1.5px;
   border-radius: 10px 0 0 10px;
   word-break: keep-all;
 }
 
 .main-wrapper .from_left .gray_1 {
-  padding: 34px 0;
+  padding: 36px 0;
 }
 
 .main-wrapper .from_left .gray_2 {
-  padding: 12px 3px;
+  padding: 13px 3px;
 }
 
 .from_right {
-  /* position: absolute;
-  top: 10.5%; 
-  right: 22px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -342,50 +374,9 @@ select:focus {
   border-radius: 5px;
   padding: 15px 4px;
   gap: 18px;
+  height: 400px;
 }
 
-.carrier {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  padding: 6px 4px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 11px;
-  color: #fff;
-}
-
-.carrier-skt {
-  background: #F6C810;
-  color: #2F2B2C;
-  font-size: 8px;
-}
-
-.carrier-kt {
-  background: #EA2424;
-  padding: 8px 4px;
-  font-size: 8px;
-}
-
-.service_center {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 10px;
-  line-height: 1.4;
-  color: #444;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.service_center p {
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.service_center p span {
-  font-size: 8px;
-  color: #808285;
-}
 
 .form_row td {
   border-bottom: 1px solid #bdbdbd;
@@ -437,6 +428,19 @@ select:focus {
   width: 70% !important;
 }
 
+.input_width_60 {
+  width: 60% !important;
+}
+
+.branch_p {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #333;
+  background: transparent;
+  padding: 2px 4px;
+  font-size: 11px;
+}
+
 /* 열두 번째 행 특정 td 너비 */
 .row_12_td2 {
   width: 10% !important;
@@ -452,13 +456,14 @@ select:focus {
 
 /* 열두 번째 행 내부 요소 스타일 */
 .row_12_td4 .input_line {
-  width: 168px !important;
+  width: 138px !important;
+  font-size: 11px;
 }
 
 .row_12_td4 .small_text {
   font-size: 6.5px !important;
   line-height: 1.1 !important;
-  width: 125px;
+  width: 175px;
   white-space: normal;   
 }
 
@@ -527,7 +532,6 @@ select:focus {
 .input_line {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #333;
   background: transparent;
   /* padding: 2px 3px; */
   box-sizing: border-box;
@@ -535,12 +539,10 @@ select:focus {
   line-height: 18px;
   padding: 0 3px;
   overflow: visible;
-  font-size: 12px;
-  font-weight: 700;
 }
 
 .input_line_s {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 
 .input_tiny {
@@ -610,7 +612,7 @@ select:focus {
 .notice_text {
   color: #6B6966;
   border-bottom: 1px solid #6B6966;
-  border-top: 1px solid #6B6966;
+  border-top: 1px solid #bdbdbd;
 }
 
 .notice_text li {
@@ -645,8 +647,20 @@ select:focus {
   justify-content: space-between;
 }
 
+.form_row td:has(.notice_sign_box_1) {
+  border-bottom: none;
+}
+
+/* 일곱 번째 행 - 서명박스 위 border 제거용 */
+.no_border_bottom_right {
+  border-bottom: none !important;
+}
+
+.keep_border_bottom {
+  border-bottom: 1px solid #bdbdbd !important;
+}
+
 .sign_label {
-  font-size: 12px;
   font-weight: 600;
   color: #91908f;
   text-align: left;
@@ -710,11 +724,6 @@ select:focus {
   color: #fff;
   line-height: 1;
 }
-/* 
-.consent-section {
-  padding: 5px 12px;
-  background: #fff8f5;
-} */
 
 .consent-check {
   gap: 10px;
@@ -870,7 +879,6 @@ p.color_text {
 .branch_box {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   border: 3px solid #FF5C04 !important;
   border-radius: 3px !important;
 }
@@ -923,9 +931,46 @@ p.color_text {
   font-weight: 600;
 }
 
+/* ==================== 페이지 번호 ==================== */
+.page_number {
+  text-align: center;
+  font-size: 8px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+/* ==================== 2줄 입력 필드 ==================== */
+.serial_textarea {
+  height: 32px;
+  resize: none;
+  line-height: 1.2;
+  font-size: 11px;
+  padding: 2px 4px;
+}
+
+.serial_textarea_small {
+  width: 80px;
+  height: 28px;
+  resize: none;
+  line-height: 1.2;
+  font-size: 10px;
+  padding: 2px 4px;
+  vertical-align: middle;
+}
+
+
+
 /* ==================== 페이지 2 ==================== */
 .page-2 {
-  padding-top: 12mm;
+
+}
+
+.page2_header {
+  display: flex;
+}
+
+.page2_header span {
+  font-size: 24pt;
 }
 
 /* ==================== 출력 스타일 ==================== */
@@ -953,8 +998,6 @@ p.color_text {
     margin: 0 auto !important;
     padding: 0 !important;
     background: #fff !important;
-    font-size: 10px;
-    line-height: 1 !important;
   }
 
   /* 3. 페이지 래퍼 */
@@ -1015,8 +1058,6 @@ p.color_text {
     background: transparent !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
   }
 
   /* 8. 체크박스 / 라디오 : 인쇄 시에도 표시 */
@@ -1029,65 +1070,15 @@ p.color_text {
     height: 10px !important;
   }
 
-  .print-check {
-    width: 10px;
-    height: 10px;
-    border: 1px solid #333;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .print-check.checked::after {
-    content: "✓";
-    font-size: 8px;
-    line-height: 1;
-  }
-
-  .print-radio {
-    width: 10px;
-    height: 10px;
-    border: 1px solid #333;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .print-radio.checked::after {
-    content: "";
-    width: 4px;
-    height: 4px;
-    background: #333;
-    border-radius: 50%;
-  }
-
-  /* 9. 동의 영역 여백 정리 */
-  .agree-row,
-  .agree-row td,
-  .agree-row li {
-    height: auto !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  /* 10. 색상 강조 요소 */
+  /* 9. 색상 강조 요소 */
   .badge-yellow,
   .badge-pink,
   .form_color,
   .consent-section,
   .from_left,
-  .side_color,
   .orange_section {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 }
 
-/* ==================== 페이지 번호 ==================== */
-.page_number {
-  text-align: center;
-  font-size: 8px;
-  font-weight: 500;
-  margin-top: 6px;
-}
