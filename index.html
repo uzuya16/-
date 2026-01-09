@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="contract_1.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.sandollcloud.com/webfont/XXXX.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
@@ -776,19 +777,237 @@
     </section>
   </div>
   <!-- ==================== 페이지 1 끝 ==================== -->
+
+  
   <!-- ==================== 페이지 2 시작==================== -->
-  <div class="page page-2">
+  <div class="page page2">
     <div class="page2_header">
       <span>무선서비스 계약 표준 안내서</span>
-      <div>
-        <figure><img src="logo.svg" alt="logo"></figure>
-        <figure><img src="" alt="skt/kt 알뜰폰"></figure>
+      <div class="brand_logo">
+        <figure>
+          <svg xmlns="http://www.w3.org/2000/svg" width="27.32mm" height="5.3mm" viewBox="0 0 77.44 15.04">
+            <g fill="#E14329">
+              <path d="M21.05,1.65c0,.91.74,1.65,1.65,1.65h7.08v2.56h-7.08c-.91,0-1.65.74-1.65,1.65v5.86c0,.91.74,1.65,1.65,1.65h10.38v-3.31h-8.73v-2.56h8.73V0h-10.38c-.91,0-1.65.74-1.65,1.65"/>
+              <rect x="35.59" y="0" width="3.26" height="15.04"/>
+              <path d="M0,13.41c0,.9.75,1.63,1.67,1.63h16.38v-3.26H1.67c-.92,0-1.67.73-1.67,1.63"/>
+              <path d="M5.51,3.26h7.27v2.51h-7.27v-2.51ZM0,1.67c0,.92.75,1.67,1.67,1.67h.62v2.59h-.62c-.92,0-1.67.75-1.67,1.67s.75,1.67,1.67,1.67h16.37v-3.34h-1.81v-2.59h1.81V0H1.67C.75,0,0,.75,0,1.67"/>
+              <path d="M41.85,13.41c0,.9.75,1.63,1.66,1.63h10.36v-3.26h-10.36c-.92,0-1.66.73-1.66,1.63"/>
+              <rect x="56.64" y="0" width="3.26" height="15.04"/>
+              <path d="M41.85,7.39c0,.9.75,1.63,1.66,1.63h10.36v-3.26h-10.36c-.92,0-1.66.73-1.66,1.63"/>
+              <path d="M41.85,1.63c0,.9.75,1.63,1.66,1.63h10.36V0h-10.36c-.92,0-1.66.73-1.66,1.63"/>
+              <path d="M73.68,0c-2.08,0-3.76,1.68-3.76,3.76s1.68,3.76,3.76,3.76,3.76-1.68,3.76-3.76-1.68-3.76-3.76-3.76"/>
+              <path d="M65.91,11.03c-1.11,0-2,.9-2,2s.9,2.01,2,2.01,2.01-.9,2.01-2.01-.9-2-2.01-2"/>
+            </g>
+          </svg>
+        </figure>
+        <figure><img src="skt_kt.svg" alt="skt/kt 알뜰폰"></figure>
       </div>
     </div>
 
+    <!-- 상단 안내 문구 -->
+    <p class="page2_notice">
+      <span class="notice_box"></span> 부분은 고객님께서 직접 자필로 작성 및 서명하여 주시기 바랍니다.
+    </p>
 
+    <!-- ====== 휴대폰 할부금 및 이동통신 요금 섹션 ====== -->
+    <div class="page2_section">
+      <div class="section_title_row">
+        <span class="section_title1">휴대폰 할부금 및 이동통신 요금</span>
+        <span class="section_sub">※ 금액은 부가세 포함가입니다.</span>
+      </div>
 
-    
+      <!-- 휴대폰 할부금 테이블 -->
+      <table class="page2_table installment_table">
+        <thead>
+          <tr>
+            <th>구입 단말</th>
+            <th>출고가</th>
+            <th>단말지원금</th>
+            <th>선 납부금</th>
+            <th>총 할부원금</th>
+            <th>
+              <span>총 할부수수료</span>
+              <div class="th_sub">
+                <span class="th_sub_box"><input type="text" class="input_mini"></span>
+                개월 할부
+              </div>
+            </th>
+            <th class="highlight_col">휴대폰 월 할부금 (A)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" class="input_cell"></td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_8pt">원</span>
+            </td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_8pt">원</span>
+            </td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_8pt">원</span>
+            </td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_8pt">원</span>
+            </td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_8pt">원</span>
+            </td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_12pt">원</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="table_notice">※ 할부 수수료는 연 5.9%, 원리금균등분할상환형으로 월별 청구되는 금액이 상이할 수 있습니다.</p>
+
+      <!-- 선택 요금제 테이블 -->
+      <table class="page2_table plan_table2">
+        <thead>
+          <tr>
+            <th>선택 요금제</th>
+            <th>월 정액요금</th>
+            <th>
+              <span>월 요금할인</span>
+              <div class="th_sub">
+                <span class="th_sub_box">
+                  <input type="text" class="input_mini">
+                </span>개월, 
+                <label><input type="checkbox">무약정</label> 
+                <label><input type="checkbox">약정</label>
+              </div>
+            </th>
+            <th>
+              <span>요금할인</span>
+              <div class="th_sub">(선택약정할인)</div>
+            </th>
+            <th class="highlight_col">통신요금 월 납부액 (B)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" class="input_cell"></td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_8pt">원</span>
+            </td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_8pt">원</span>
+            </td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_8pt">원</span>
+            </td>
+            <td><input type="text" class="input_cell input_right">
+              <span class="text_12pt">원</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 합계 테이블 -->
+      <table class="page2_table total_table">
+        <tr>
+          <th>통신요금 월 납부액<br>(A) + (B)</th>
+          <td><input type="text" class="input_cell input_right">
+            <span class="text_12pt">원</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ====== 위약금 안내 섹션 ====== -->
+    <div class="page2_section">
+      <span class="section_title2">
+        위약금 안내
+      </span>
+
+      <div class="penalty_content">
+        <div class="penalty_left">
+          <p class="penalty_subtitle">※ 위약금이 부과 되는 경우</p>
+          <ul class="penalty_list">
+            <li>① 공시지원금 받고 약정기간 내 해지 시</li>
+            <li>② 요금할인 받다가 약정기간 내 해지 시</li>
+            <li>③ 공시지원금을 받은 후 하향 또는 일반 요금제 변경 시</li>
+            <li>④ 요금할인 받다가 중도에 기기(LTE → 3G) 변경 시</li>
+          </ul>
+        </div>
+        <div class="penalty_right">
+          <p class="penalty_subtitle">※ 해지 시 예약 위약금 (공시지원금/요금할인)</p>
+          <table class="penalty_table">
+            <tr>
+              <th>위약금(12개월째)</th>
+              <td><input type="text" class="input_cell input_right">원</td>
+            </tr>
+            <tr>
+              <th>위약금(18개월째)</th>
+              <td><input type="text" class="input_cell input_right">원</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <p class="penalty_notice">※ 상기 예상 위약금은 금번에 가입한 서비스에 한하며, 서비스 변경 및 해지 시점에따라 위약금은 다르게 청구됩니다.</p>
+    </div>
+
+    <!-- ====== 기타안내 사항 섹션 ====== -->
+    <div class="page2_section">
+      <span class="section_title3">
+        기타 안내 사항
+      </span>
+
+      <ul class="info_list penalty_list">
+        <li>● 유료부가서비스 가입시 추가요금이 발생합니다.</li>
+        <li>● 월 초에 데이터를 많이 사용한 상태에서 요금제를 변경할 경우 일할계산방식으로 인해 데이터 초과 사용에 따른 추가요금이 발생할 수 있습니다.</li>
+        <li>● 프로모션 요금할인코드가 적용되어 있는 요금제의 경우 월 중 요금제 변경 시 해당 월 기본료에 대한 할인금액은 변동될 수 있습니다.</li>
+        <li>● 해외에서는 데이터를 사용한 만큼 과금되므로 출국 전에 정액로밍 요금제에 가입하거나 데이터로밍이 차단되도록 설정하시기 바랍니다.</li>
+        <li>● 표준요금제는 데이터 기본 제공량이 없고 사용한 만큼 과금되므로 데이터 사용을 원천적으로 차단하고자 할 경우 데이터차단서비스(무료 부가서비스)를 신청하시기 바랍니다.</li>
+        <li>● 본 표준안내서는 이용요금, 예상위약금, 약정조건, 요금할인 등의 중요한 사항을 정리한 것이며, 그 밖의 사항은 가입신청서 등을 반드시 확인하시기 바랍니다.</li>
+      </ul>
+    </div>
+
+    <!-- ====== 가입자 확인 섹션 ====== -->
+    <div class="page2_section confirm_section">
+      <div class="confirm_title">가입자 확인</div>
+
+      <div class="confirm_box">
+        <!-- 첫 번째 행: 본인은 판매직원... -->
+        <div class="confirm_row1">
+          <div class="confirm_statement">
+            <span>본인은 판매직원 (</span>
+            <input type="text" class="input_name">
+            <span>) 으로 부터 표준안내서를 교부 받고 설명을 들었습니다.</span>
+          </div>
+          <div class="confirm_check_cell">
+            <label class="confirm_check">
+              <input type="checkbox"> 내용 확인
+            </label>
+          </div>
+        </div>
+        <!-- 두/세 번째 행 -->
+        <div class="confirm_row2">
+          <div class="confirm_left">
+            <div class="confirm_field">
+              <span class="confirm_label">이동전화번호</span>
+              <span class="confirm_value">010 - <input type="text" maxlength="8" class="input_phone2"></span>
+            </div>
+            <div class="confirm_field">
+              <span class="confirm_label">가 입 일 자</span>
+              <span class="confirm_value">202<input type="text" class="input_year" maxlength="1"> 년 <input type="text" class="input_date" maxlength="2"> 월 <input type="text" class="input_date" maxlength="2"> 일</span>
+            </div>
+          </div>
+          <div class="confirm_sign">
+            <span class="sign_title">가입자 (대리인)</span>
+            <span class="sign_text">서명/인</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 회사명 -->
+    <div class="page2_footer">
+      <span>주식회사 프리텔레콤</span>
+    </div>
+
+    <!-- 페이지 번호 -->
+    <div class="page_number">8-2</div>
   </div>
   <!-- ==================== 페이지 2 끝 ==================== -->
 </body>

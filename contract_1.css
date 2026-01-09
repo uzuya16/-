@@ -1,6 +1,61 @@
+/* style.css */
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+
 /*  숨겨진 내용(상단 통신사/ 오른쪽 사이드 통신사 전화번호,팩스번호/하단 회사이름) */
-
-
 .carrier_top {
   display: inline-block;
   padding: 2px 10px;
@@ -71,7 +126,6 @@ body {
   line-height: 1;
   color: #2F2B2C;
   background: #f0f0f0;
-  font-family: "Noto Sans KR", serif;
 }
 
 input[type="text"],
@@ -102,6 +156,7 @@ select:focus {
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  font-family: "Noto Sans KR", serif;
 }
 
 /* ==================== 헤더 ==================== */
@@ -961,16 +1016,457 @@ p.color_text {
 
 
 /* ==================== 페이지 2 ==================== */
-.page-2 {
-
+.page2,
+.page2 * {
+  font-family: 'Paperozi' !important;
+  color: #6A6A66;
 }
 
 .page2_header {
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 15pt;
+  border-bottom: 0.8pt solid #6A6A66;
 }
 
 .page2_header span {
   font-size: 24pt;
+  letter-spacing: 1pt;
+  
+}
+
+.page2 .brand_logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 상단 안내 문구 */
+.page2_notice {
+  text-align: right;
+  font-size: 10pt;
+  font-weight: 500;
+  padding: 8pt 0;
+  margin-right: 10px;
+}
+
+.notice_box {
+  display: inline-block;
+  width: 15pt;
+  height: 15pt;
+  background: #f7f8f9;
+  border-top: 1.5pt solid #FF5A00;
+  border-bottom: 1.5pt solid #FF5A00;
+  vertical-align: middle;
+  margin-right: 3pt;
+}
+
+/* 섹션 */
+.page2_section {
+  margin-bottom: 10pt;
+}
+
+.section_title_row {
+  display: flex;
+  align-items: baseline;
+  gap: 10pt;
+  margin-bottom: 8pt;
+}
+
+.section_title1 {
+  font-size: 11pt;
+  font-weight: 300;
+  color: #fff;
+  background: #6A6A66;
+  padding: 3pt 20pt;
+  padding-right: 30pt;
+  border-radius: 0 50px 50px 0;
+}
+
+.section_title2 {
+  font-size: 11pt;
+  font-weight: 300;
+  color: #fff;
+  background: #6A6A66;
+  padding: 3pt 20pt;
+  padding-right: 42pt;
+  border-radius: 0 50px 50px 0;
+}
+
+.section_title3 {
+  font-size: 11pt;
+  font-weight: 300;
+  color: #fff;
+  background: #6A6A66;
+  padding: 3pt 20pt;
+  padding-right: 30pt;
+  border-radius: 0 50px 50px 0;  
+}
+
+.section_sub {
+  font-size: 7pt;
+  color: #666;
+}
+
+/* 페이지2 테이블 공통 */
+.page2_table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 11pt;
+  color: #fff;
+}
+
+.page2_table th,
+.page2_table td {
+  border: 0.8pt solid #6A6A66;
+  padding: 5pt 3pt;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.page2_table thead th {
+  background: #EDEEEF;
+  font-weight: 400;
+  font-size: 10pt;
+}
+
+.page2_table tbody td {
+  background: #fff;
+  height: 25pt;
+  font-size: 7pt;
+  font-weight: 400;
+}
+
+/* 하이라이트 열 */
+.page2_table .highlight_col {
+  background: #6A6A66 !important;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12pt;
+}
+
+/* th 내부 서브텍스트 */
+.th_sub {
+  font-size: 8pt;
+  font-weight: 400;
+  margin-top: 3pt;
+}
+
+.th_sub_box {
+  background: #fff;
+  border: 0.3pt solid #c5c6c6;
+}
+
+.th_sub label {
+  margin: 0 2pt;
+}
+
+/* 입력 필드 */
+.input_mini {
+  width: 25pt;
+  border: none;
+  text-align: center;
+  font-size: 9pt;
+  background: transparent;
+}
+
+.input_cell {
+  width: 80%;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+.input_right {
+  text-align: right;
+}
+
+/* 테이블 하단 안내 */
+.table_notice {
+  text-align: right;
+  font-size: 8pt;
+  font-weight: 400;
+  color: #666;
+  padding: 5pt 0;
+}
+
+/* 할부 테이블 열 너비 */
+.installment_table th:nth-child(1) { width: 10%; }
+.installment_table th:nth-child(2) { width: 11%; }
+.installment_table th:nth-child(3) { width: 9%; }
+.installment_table th:nth-child(4) { width: 8%; }
+.installment_table th:nth-child(5) { width: 11%; }
+.installment_table th:nth-child(6) { width: 10%; }
+.installment_table th:nth-child(7) { width: 20%; }
+
+/* 요금제 테이블 열 너비 */
+.plan_table2 th:nth-child(1) { width: 20%; }
+.plan_table2 th:nth-child(2) { width: 20%; }
+.plan_table2 th:nth-child(3) { width: 22%; }
+.plan_table2 th:nth-child(4) { width: 15%; }
+.plan_table2 th:nth-child(5) { width: 26%; }
+
+/* 합계 테이블 */
+.total_table {
+  width: 50%;
+  margin-left: auto;
+  margin-top: 15pt;
+}
+
+.total_table th {
+  background: #6a6a66;
+  font-weight: 500;
+  font-size: 11pt;
+  color: #fff;
+  width: 60%;
+  border: 1pt solid #6a6a66;
+  height: 60px;
+}
+
+.total_table td {
+  background: #fff;
+  font-size: 12pt;
+  font-weight: 700;
+  border: 1pt solid #6a6a66;
+}
+
+.text_8pt {
+  font-size: 8pt;
+  font-weight: 400;
+}
+.text_12pt {
+  font-size: 12pt;
+  font-weight: 400;
+}
+
+/* ====== 위약금 안내 섹션 ====== */
+.penalty_content {
+  display: flex;
+  gap: 15pt;
+  padding: 8pt 0;
+}
+
+.penalty_left {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.penalty_right {
+  flex: 1;
+}
+
+.penalty_subtitle {
+  font-size: 8.5pt;
+  font-weight: 700;
+  margin-bottom: 5pt;
+}
+
+.penalty_list {
+  font-size: 7.5pt;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.info_list {
+  padding: 9pt 0; 
+  padding-left: 10px;
+}
+
+.penalty_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.penalty_table th,
+.penalty_table td {
+  border: 0.8pt solid #6A6A66;
+  padding: 5pt 8pt;
+  font-size: 7.5pt;
+  font-weight: 200;
+}
+
+.penalty_table th {
+  background: #EDEEEF;
+  text-align: left;
+  font-weight: 500;
+  width: 50%;
+}
+
+.penalty_table td {
+  background: #fff;
+  text-align: right;
+}
+
+.penalty_notice {
+  font-size: 7.5pt;
+  line-height: 1.2;
+  font-weight: 400;
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+
+/* ====== 가입자 확인 섹션 ====== */
+.confirm_section {
+  margin-top: 30pt;
+}
+
+.confirm_title {
+  display: inline-block;
+  font-size: 11pt;
+  font-weight: 300;
+  color: #ffffff;
+  padding: 3pt 20pt;
+  padding-right: 30pt;
+  background: #FF5A00;
+  border-bottom: none;
+  border-radius: 0 50px 50px 0;
+}
+
+/* 가입자 확인 박스 */
+.confirm_box {
+  border: 2pt solid #FF5A00;
+}
+
+/* 첫 번째 행 */
+.confirm_row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8pt 15pt;
+  border-bottom: 2pt solid #FF5A00
+}
+
+.confirm_statement {
+  font-size: 9.5pt;
+  font-weight: 600;
+}
+
+.confirm_check_cell {
+  flex-shrink: 0;
+}
+
+.input_name {
+  width: 90pt;
+  border: none;
+  border-bottom: 1pt solid #333;
+  text-align: center;
+  font-size: 11pt;
+  background: transparent;
+}
+
+.confirm_check {
+  display: inline-flex;
+  align-items: center;
+  gap: 5pt;
+  font-size: 9.5pt;
+  font-weight: 600;
+}
+
+.confirm_check input[type="checkbox"] {
+  width: 14pt;
+  height: 14pt;
+}
+
+/* 두/세 번째 행 */
+.confirm_row2 {
+  display: flex;
+}
+
+.confirm_left {
+  flex: 1;
+  border-right: 2pt solid #FF5A00
+}
+
+.confirm_field {
+  display: flex;
+  border-bottom: 0.5pt solid #ccc;
+}
+
+.confirm_field:last-child {
+  border-bottom: none;
+}
+
+.confirm_label {
+  width: 100pt;
+  padding: 8pt 15pt;
+  font-size: 9pt;
+  font-weight: 400;
+  border-right: 0.5pt solid #ccc;
+}
+
+.confirm_value {
+  flex: 1;
+  padding: 8pt 12pt;
+  font-size: 9pt;
+}
+
+.input_phone2 {
+  width: 100pt;
+  border: none;
+  border-bottom: 1pt solid #333;
+  font-size: 11pt;
+  background: transparent;
+}
+
+.input_year {
+  width: 15pt;
+  border: none;
+  border-bottom: 1pt solid #333;
+  text-align: center;
+  font-size: 11pt;
+  background: transparent;
+}
+
+.input_date {
+  width: 20pt;
+  border: none;
+  border-bottom: 1pt solid #333;
+  text-align: center;
+  font-size: 11pt;
+  background: transparent;
+}
+
+/* 서명 영역 */
+.confirm_sign {
+  width: 290pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8pt 12pt;
+  position: relative;
+  background: #EDEEEF;
+}
+
+.sign_title {
+  font-size: 10pt;
+  font-weight: 600;
+}
+
+.sign_text {
+  font-size: 7pt;
+  font-weight: 400;
+  color: #999;
+}
+
+/* ====== 하단 회사명 ====== */
+.page2_footer {
+  text-align: right;
+  font-size: 14pt;
+  padding: 10pt 0;
+  font-weight: 600;
+}
+
+
+/* 페이지 번호 하단 고정 */
+.page2 .page_number {
+  position: absolute;
+  bottom: 5mm;
+  left: 0;
+  right: 0;
 }
 
 /* ==================== 출력 스타일 ==================== */
@@ -1004,10 +1500,14 @@ p.color_text {
   .page {
     width: 210mm;
     height: 297mm;
+    min-height: 297mm;
+    max-height: 297mm;
     margin: 0 auto !important;
     padding: 2mm 5mm !important;
     box-shadow: none !important;
     page-break-after: always;
+    page-break-inside: avoid;
+    overflow: hidden;
   }
 
   .page:last-child {
