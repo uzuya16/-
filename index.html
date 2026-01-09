@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>후불 이동전화 가입신청서</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <link rel="stylesheet" href="contract_1.css">
+  <link rel="stylesheet" href="Postpaid.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdn.sandollcloud.com/webfont/XXXX.css">
@@ -27,7 +27,7 @@
               </span>
             </td>
             <td>
-                <span class="carrier_top">freeT</span>
+              <span class="carrier_top">freeT</span>
             </td>
           </tr>
         </table>
@@ -48,7 +48,7 @@
                 <input type="radio"> 본인
                 <span class="en">Individual</span>
               </label>
-              <label>
+              <label class="label_2th">
                 <input type="radio"> 대리인
                 <span class="en">Representative</span>
               </label>
@@ -58,14 +58,7 @@
               </label>
             </div>
           </div>
-          <div class="info_group"> <span class="label_bold">업무구분</span>
-            <div class="input"> <label><input type="radio"> 신규가입<span class="en">New</span></label>
-              <label><input type="radio"> 번호이동<span class="en">MNP</span></label> <label><input type="radio"> 명의변경<span
-                  class="en">Transfer</span></label> <label><input type="radio"> 기간연장<span class="en">Period
-                  Extension</span></label> <label><input type="radio"> 후불전환<span class="en">Conversion of
-                  prepaid</span></label>
-            </div>
-          </div>
+
           <div class="info_group"> <span class="label_bold">고객구분</span>
             <div class="input"> <label><input type="radio"> 내국인<span class="en">National</span></label>
               <label><input type="radio"> 외국인<span class="en">Foreigner</span></label> <label><input type="radio">
@@ -73,6 +66,18 @@
                   class="en">Corporation</span></label>
             </div>
           </div>
+
+          <div class="info_group"> <span class="label_bold">업무구분</span>
+            <div class="input"> <label><input type="radio"> 신규가입<span class="en">New</span></label>
+              <label class="label_2th_1"><input type="radio"> 번호이동<span class="en">MNP</span></label> <label
+                class="label_3th"><input type="radio"> 명의변경<span class="en">Transfer</span></label> <label><input
+                  type="radio"> 기간연장<span class="en">Period
+                  Extension</span></label> <label><input type="radio"> 후불전환<span class="en">Convert to
+                  Postpaid</span></label>
+
+            </div>
+          </div>
+
         </div>
         <!-- 오른쪽 영역 -->
         <div class="info_right">
@@ -80,8 +85,10 @@
             <div class="text_num"> <span>신규가입번호</span> <span>(명의변경)</span> </div> <input type="text" class="phone-input"
               placeholder="0 1 -">
           </div>
-          <div class="text_box"> <img src="star.svg" alt="별표시"> 표시된 부분은 필수기재사항이므로 고객님이 직접 적어주시기 바랍니다. </div>
         </div>
+      </div>
+      <div class="text_box"> <img src="star.svg" alt="별표시">
+        표시된 부분은 필수기재사항이므로 고객님이 직접 적어주시기 바랍니다.
       </div>
       <!-- ============ 메인 컨텐츠 (좌측 사이드바 포함) ============ -->
       <div class="main-wrapper">
@@ -120,9 +127,7 @@
               <tr class="form_row form_color">
                 <td>
                   <div class="field_label">
-                    <figure class="star">
-                      <img src="star.svg" alt="별표시">
-                    </figure>
+                    <figure class="star"><img src="star.svg" alt="별표시"></figure>
                     <span>고객명(법인명)</span>
                     <span class="label_divider"></span>
                   </div>
@@ -161,11 +166,9 @@
                 <td>
                   <input type="text" class="input_line">
                 </td>
-                <td class="bill_type">
+                <td>
                   <div class="field_label">
-                    <figure class="star">
-                      <img src="star.svg" alt="별표시">
-                    </figure>
+                    <figure class="star"><img src="star.svg" alt="별표시"></figure>
                     <span>청구서 종류</span>
                     <span class="label_divider"></span>
                   </div>
@@ -204,7 +207,7 @@
                 <td>
                   <div class="field_label">
                     <figure class="star"><img src="star.svg" alt="별표시"></figure>
-                    요금 납부 방법
+                    <span>요금 납부 방법</span>
                     <span class="label_divider"></span>
                   </div>
                 </td>
@@ -217,7 +220,7 @@
                 <td>
                   <div class="field_label">
                     <figure class="star"><img src="star.svg" alt="별표시"></figure>
-                    예금주(카드주)
+                    <span>예금주(카드주)</span>
                     <span class="label_divider"></span>
                   </div>
                 </td>
@@ -226,19 +229,23 @@
                 <td>
                   <div class="field_label">
                     <figure class="star"><img src="star.svg" alt="별표시"></figure>
-                    법정생년월일
+                    <span>법정생년월일</span>
                     <span class="label_divider"></span>
                   </div>
                 </td>
-                <td class="nowrap"> <input type="text" class="input_line input_width_50"> <span>(관계 : </span> <input
-                    type="text" class="input_width_30 input_line_s"> <span>)</span> </td>
+                <td class="nowrap">
+                  <input type="text" class="input_line input_width_50">
+                  <span>(관계 : </span>
+                  <input type="text" class="input_width_30 input_line_s">
+                  <span>)</span>
+                </td>
               </tr>
               <!-- 여섯 번째 행 -->
               <tr class="form_row form_color">
                 <td>
                   <div class="field_label">
                     <figure class="star"><img src="star.svg" alt="별표시"></figure>
-                    은행(카드사)명
+                    <span>은행(카드사)명</span>
                     <span class="label_divider"></span>
                   </div>
                 </td>
@@ -267,13 +274,17 @@
                 <td class="keep_border_bottom">
                   <div class="field_label">
                     <figure class="star"><img src="star.svg" alt="별표시"></figure>
-                    계좌(카드)번호
+                    <span>계좌(카드)번호</span>
                     <span class="label_divider"></span>
                   </div>
                 </td>
-                <td colspan="3" class="no_border_bottom_right"> <input type="text" class="input_line input_width_70"> <span>유효기간 (</span>
-                  <input type="text" class="input_tiny"> <span>년</span> <input type="text" class="input_tiny"> <span>월
-                    )</span>
+                <td colspan="3" class="no_border_bottom_right">
+                  <input type="text" class="input_line input_width_70">
+                  <span>유효기간 (</span>
+                  <input type="text" class="input_tiny">
+                  <span>년</span>
+                  <input type="text" class="input_tiny">
+                  <span>월)</span>
                 </td>
               </tr>
               <!-- 여덟 번째 행 - 설명과 서명 -->
@@ -300,43 +311,45 @@
                     <span class="label_divider"></span>
                   </div>
                 </td>
-                <td class="nowrap"> <label class="radio_inline"> <input type="radio" value="prepaid">
-                    선불 </label> <label class="radio_inline"> <input type="radio" value="postpaid">
-                    후불
-                  </label> <input type="text" class="input_phone input_line" placeholder="01X-XXXX-XXXX">
+                <td class="nowrap">
+                  <label class="radio_inline"><input type="radio" value="prepaid"> 선불</label>
+                  <label class="radio_inline"><input type="radio" value="postpaid"> 후불</label>
+                  <input type="text" class="input_phone input_line" placeholder="01X-XXXX-XXXX">
                 </td>
                 <td>
                   <div class="field_label">
-                    변경전 통신사
+                    <span>변경전 통신사</span>
                     <span class="label_divider"></span>
                   </div>
                 </td>
                 <td class="nowrap">
                   <label class="radio_inline"><input type="radio"> SKT</label>
-                  <label class="radio_inline"><input type="radio"> KT</label> <label class="radio_inline"><input
-                      type="radio"> LGU+</label> <label class="radio_inline"> <input type="radio" value="MVNO"> 알뜰폰
-                    (<input type="text" class="input_width_30 input_line_s">) </label>
+                  <label class="radio_inline"><input type="radio"> KT</label>
+                  <label class="radio_inline"><input type="radio"> LGU+</label>
+                  <label class="radio_inline"><input type="radio" value="MVNO"> 알뜰폰 (<input type="text"
+                      class="input_width_30 input_line_s">)</label>
                 </td>
               </tr>
               <!-- 열 번째 행 -->
               <tr class="form_row">
                 <td>
                   <div class="field_label">
-                    이전 통신사 사용요금
+                    <span>이전 통신사 사용요금</span>
                     <span class="label_divider"></span>
                   </div>
                 </td>
-                <td> <label class="radio_inline"> <input type="radio" value="merge"> 청구서 받은 후 합산청구
-                  </label> </td>
+                <td>
+                  <label class="radio_inline"><input type="radio" value="merge"> 청구서 받은 후 합산청구</label>
+                </td>
                 <td>
                   <div class="field_label">
-                    단말기 할부금
+                    <span>단말기 할부금</span>
                     <span class="label_divider"></span>
                   </div>
                 </td>
-                <td> <label class="radio_inline"> <input type="radio" value="continue"> 할부지속 (변경
-                    전
-                    통신사에서 납부) </label> </td>
+                <td>
+                  <label class="radio_inline"><input type="radio" value="continue"> 할부지속 (변경 전 통신사에서 납부)</label>
+                </td>
               </tr>
               <!-- 열한 번째 행 - 긴 설명 -->
               <tr class="form_row">
@@ -361,23 +374,27 @@
               <tr class="form_row form_color">
                 <td class="row_12_td2">
                   <div class="field_label">
-                    <figure class="star"><img src="star.svg" alt="별표시"></figure> 요금제 <span class="label_divider"></span>
+                    <figure class="star"><img src="star.svg" alt="별표시"></figure>
+                    <span>요금제</span>
+                    <span class="label_divider"></span>
                   </div>
                 </td>
-                <td> <textarea class="input_line serial_textarea" rows="2"></textarea> </td>
+                <td>
+                  <textarea class="input_line serial_textarea" rows="2"></textarea>
+                </td>
                 <td class="row_12_td3">
                   <div class="field_label">
-                    <figure class="star"><img src="star.svg" alt="별표시"></figure> USIM 일련번호 <span
-                      class="label_divider"></span>
+                    <figure class="star"><img src="star.svg" alt="별표시"></figure>
+                    <span>USIM 일련번호</span>
+                    <span class="label_divider"></span>
                   </div>
                 </td>
                 <td class="row_12_td4">
-                  <div class="field_inline"> <textarea maxlength="20" class="input_line serial_textarea" rows="2"></textarea>
-                    <label class="radio_inline">
-                      <input type="radio" value="esim"> eSIM </label>
-                    <span class="small_text">
-                      ※eSIM 단말의 경우, 개통에 필요한 사업자 인증정보 다운로드 수수료 2,750원(부가세포함)이 다음달 요금에 합산 청구됩니다.
-                    </span>
+                  <div class="field_inline">
+                    <textarea maxlength="20" class="input_line serial_textarea" rows="2"></textarea>
+                    <label class="radio_inline"><input type="radio" value="esim"> eSIM</label>
+                    <span class="small_text">※eSIM 단말의 경우, 개통에 필요한 사업자 인증정보 다운로드 수수료 2,750원(부가세포함)이 다음달 요금에 합산
+                      청구됩니다.</span>
                   </div>
                 </td>
               </tr>
@@ -388,7 +405,7 @@
             <tr class="form_row">
               <td>
                 <div class="field_label">
-                  단말기 정보
+                  <span>단말기 정보</span>
                   <span class="label_divider"></span>
                 </div>
               </td>
@@ -400,85 +417,83 @@
               </td>
               <td>
                 <div class="field_label">
-                  통신과금서비스
+                  <span>통신과금서비스</span>
                   <span class="label_divider"></span>
                 </div>
               </td>
-              <td> <label class="radio_inline"> <input type="radio" value="yes"> 이용신청 </label>
+              <td>
+                <label class="radio_inline"><input type="radio" value="yes"> 이용신청</label>
               </td>
             </tr>
             <!-- 열네 번째 행 -->
             <tr class="form_row">
               <td>
                 <div class="field_label">
-                  희망번호 뒷네자리
+                  <span>희망번호 뒷네자리</span>
                   <span class="label_divider"></span>
                 </div>
               </td>
               <td>
-                <div class="field_inline"> 
-                  <span>①</span> 
+                <div class="field_inline">
+                  <span>①</span>
                   <input type="text" maxlength="4" class="input_width_40">
-                  <span>②</span> 
-                  <input type="text" maxlength="4" class="input_width_40"> 
-                  <span>③</span> 
+                  <span>②</span>
+                  <input type="text" maxlength="4" class="input_width_40">
+                  <span>③</span>
                   <input type="text" maxlength="4" class="input_width_40">
                 </div>
               </td>
               <td>
                 <div class="field_label">
-                  부가서비스
+                  <span>부가서비스</span>
                   <span class="label_divider"></span>
                 </div>
               </td>
               <td>
-                <div class="field_inline"> <label class="radio_inline"> <input type="radio" value="internet"> 무선인터넷 차단신청
-                  </label> <label class="radio_inline"> <input type="radio" value="other"> 기타 ( <textarea
-                      class="input_width_70 serial_textarea_small" rows="2"></textarea>
-                    ) </label> </div>
+                <div class="field_inline">
+                  <label class="radio_inline"><input type="radio" value="internet"> 무선인터넷 차단신청</label>
+                  <label class="radio_inline"><input type="radio" value="other"> 기타 (<textarea
+                      class="input_width_70 serial_textarea_small" rows="2"></textarea>)</label>
+                </div>
               </td>
             </tr>
             <!-- 열다섯 번째 행 -->
             <tr class="form_row">
               <td>
                 <div class="field_label">
-                  IMEI
+                  <span>IMEI</span>
                   <span class="label_divider"></span>
                 </div>
               </td>
-              <td> <input type="text" maxlength="32" class="input_line" placeholder="eSIM 개통시 필수 기재"> </td>
+              <td>
+                <input type="text" maxlength="32" class="input_line" placeholder="eSIM 개통시 필수 기재">
+              </td>
               <td>
                 <div class="field_label field_label_multi">
                   <div>
-                    <span class="field_inline">
-                      IMEI2
-                    </span>
-                    <span class="small_text">
-                      (eSIM IMEI)
-                    </span>
+                    <span class="field_inline">IMEI2</span>
+                    <span class="small_text">(eSIM IMEI)</span>
                   </div>
                   <span class="label_divider"></span>
                 </div>
               </td>
-              <td> <input type="text" maxlength="32" class="input_line" placeholder="eSIM 개통시 필수 기재"> </td>
+              <td>
+                <input type="text" maxlength="32" class="input_line" placeholder="eSIM 개통시 필수 기재">
+              </td>
             </tr>
             <!-- 열여섯 번째 행 -->
             <tr class="form_row">
               <td>
                 <div class="field_label field_label_multi">
                   <div>
-                    <span class="field_inline">
-                      EID
-                    </span>
-                    <span class="small_text">
-                      o(32자리)
-                    </span>
+                    <span class="field_inline">EID</span>
+                    <span class="small_text">o(32자리)</span>
                   </div>
                   <span class="label_divider"></span>
                 </div>
               </td>
-              <td colspan="2" class="eid_td">
-                <input type="text" class="input_line" style="width: 100%;" maxlength="32" placeholder="eSIM 개통시 필수 기재">
+              <td colspan="2">
+                <input type="text" class="input_line input_full" maxlength="32" placeholder="eSIM 개통시 필수 기재">
               </td>
               <td class="esim_notice">
                 <span class="small_text">※ eSIM 다운로드 비용 2,750원 (후 청구)</span>
@@ -491,11 +506,11 @@
           <span class="carrier_side">freeT</span>
           <div class="service_center">
             <div>
-              <span class="small_text">T.</span> 
+              <span class="small_text">T.</span>
               <span class="service_center_t">1661-2217</span>
             </div>
             <div>
-              <span class="small_text">F.</span> 
+              <span class="small_text">F.</span>
               <span class="service_center_t">1661-2217</span>
             </div>
           </div>
@@ -761,7 +776,7 @@
           </td>
           <td class="company_cell">
             <div class="company_seal">
-              <div class="company_text">주식회사 
+              <div class="company_text">주식회사
                 <span class="company">프리텔레콤</span>
               </div>
               <figure class="seal"><img src="stamp.svg" alt="stamp"></figure>
@@ -778,8 +793,7 @@
   </div>
   <!-- ==================== 페이지 1 끝 ==================== -->
 
-  
-  <!-- ==================== 페이지 2 시작==================== -->
+  <!-- ==================== 페이지 2 시작 ==================== -->
   <div class="page page2">
     <div class="page2_header">
       <span>무선서비스 계약 표준 안내서</span>
@@ -787,16 +801,19 @@
         <figure>
           <svg xmlns="http://www.w3.org/2000/svg" width="27.32mm" height="5.3mm" viewBox="0 0 77.44 15.04">
             <g fill="#E14329">
-              <path d="M21.05,1.65c0,.91.74,1.65,1.65,1.65h7.08v2.56h-7.08c-.91,0-1.65.74-1.65,1.65v5.86c0,.91.74,1.65,1.65,1.65h10.38v-3.31h-8.73v-2.56h8.73V0h-10.38c-.91,0-1.65.74-1.65,1.65"/>
-              <rect x="35.59" y="0" width="3.26" height="15.04"/>
-              <path d="M0,13.41c0,.9.75,1.63,1.67,1.63h16.38v-3.26H1.67c-.92,0-1.67.73-1.67,1.63"/>
-              <path d="M5.51,3.26h7.27v2.51h-7.27v-2.51ZM0,1.67c0,.92.75,1.67,1.67,1.67h.62v2.59h-.62c-.92,0-1.67.75-1.67,1.67s.75,1.67,1.67,1.67h16.37v-3.34h-1.81v-2.59h1.81V0H1.67C.75,0,0,.75,0,1.67"/>
-              <path d="M41.85,13.41c0,.9.75,1.63,1.66,1.63h10.36v-3.26h-10.36c-.92,0-1.66.73-1.66,1.63"/>
-              <rect x="56.64" y="0" width="3.26" height="15.04"/>
-              <path d="M41.85,7.39c0,.9.75,1.63,1.66,1.63h10.36v-3.26h-10.36c-.92,0-1.66.73-1.66,1.63"/>
-              <path d="M41.85,1.63c0,.9.75,1.63,1.66,1.63h10.36V0h-10.36c-.92,0-1.66.73-1.66,1.63"/>
-              <path d="M73.68,0c-2.08,0-3.76,1.68-3.76,3.76s1.68,3.76,3.76,3.76,3.76-1.68,3.76-3.76-1.68-3.76-3.76-3.76"/>
-              <path d="M65.91,11.03c-1.11,0-2,.9-2,2s.9,2.01,2,2.01,2.01-.9,2.01-2.01-.9-2-2.01-2"/>
+              <path
+                d="M21.05,1.65c0,.91.74,1.65,1.65,1.65h7.08v2.56h-7.08c-.91,0-1.65.74-1.65,1.65v5.86c0,.91.74,1.65,1.65,1.65h10.38v-3.31h-8.73v-2.56h8.73V0h-10.38c-.91,0-1.65.74-1.65,1.65" />
+              <rect x="35.59" y="0" width="3.26" height="15.04" />
+              <path d="M0,13.41c0,.9.75,1.63,1.67,1.63h16.38v-3.26H1.67c-.92,0-1.67.73-1.67,1.63" />
+              <path
+                d="M5.51,3.26h7.27v2.51h-7.27v-2.51ZM0,1.67c0,.92.75,1.67,1.67,1.67h.62v2.59h-.62c-.92,0-1.67.75-1.67,1.67s.75,1.67,1.67,1.67h16.37v-3.34h-1.81v-2.59h1.81V0H1.67C.75,0,0,.75,0,1.67" />
+              <path d="M41.85,13.41c0,.9.75,1.63,1.66,1.63h10.36v-3.26h-10.36c-.92,0-1.66.73-1.66,1.63" />
+              <rect x="56.64" y="0" width="3.26" height="15.04" />
+              <path d="M41.85,7.39c0,.9.75,1.63,1.66,1.63h10.36v-3.26h-10.36c-.92,0-1.66.73-1.66,1.63" />
+              <path d="M41.85,1.63c0,.9.75,1.63,1.66,1.63h10.36V0h-10.36c-.92,0-1.66.73-1.66,1.63" />
+              <path
+                d="M73.68,0c-2.08,0-3.76,1.68-3.76,3.76s1.68,3.76,3.76,3.76,3.76-1.68,3.76-3.76-1.68-3.76-3.76-3.76" />
+              <path d="M65.91,11.03c-1.11,0-2,.9-2,2s.9,2.01,2,2.01,2.01-.9,2.01-2.01-.9-2-2.01-2" />
             </g>
           </svg>
         </figure>
@@ -872,8 +889,8 @@
               <div class="th_sub">
                 <span class="th_sub_box">
                   <input type="text" class="input_mini">
-                </span>개월, 
-                <label><input type="checkbox">무약정</label> 
+                </span>개월,
+                <label><input type="checkbox">무약정</label>
                 <label><input type="checkbox">약정</label>
               </div>
             </th>
@@ -916,9 +933,7 @@
 
     <!-- ====== 위약금 안내 섹션 ====== -->
     <div class="page2_section">
-      <span class="section_title2">
-        위약금 안내
-      </span>
+      <span class="section_title2">위약금 안내</span>
 
       <div class="penalty_content">
         <div class="penalty_left">
@@ -949,9 +964,7 @@
 
     <!-- ====== 기타안내 사항 섹션 ====== -->
     <div class="page2_section">
-      <span class="section_title3">
-        기타 안내 사항
-      </span>
+      <span class="section_title3">기타 안내 사항</span>
 
       <ul class="info_list penalty_list">
         <li>● 유료부가서비스 가입시 추가요금이 발생합니다.</li>
@@ -973,13 +986,11 @@
           <div class="confirm_statement">
             <span>본인은 판매직원 (</span>
             <input type="text" class="input_name">
-            <span>) 으로 부터 표준안내서를 교부 받고 설명을 들었습니다.</span>
+            <span>) 으로부터 표준안내서를 교부 받고 설명을 들었습니다.</span>
           </div>
-          <div class="confirm_check_cell">
-            <label class="confirm_check">
-              <input type="checkbox"> 내용 확인
-            </label>
-          </div>
+          <label class="confirm_check">
+            <input type="checkbox"> 내용 확인
+          </label>
         </div>
         <!-- 두/세 번째 행 -->
         <div class="confirm_row2">
@@ -990,7 +1001,8 @@
             </div>
             <div class="confirm_field">
               <span class="confirm_label">가 입 일 자</span>
-              <span class="confirm_value">202<input type="text" class="input_year" maxlength="1"> 년 <input type="text" class="input_date" maxlength="2"> 월 <input type="text" class="input_date" maxlength="2"> 일</span>
+              <span class="confirm_value">202<input type="text" class="input_year" maxlength="1"> 년 <input type="text"
+                  class="input_date" maxlength="2"> 월 <input type="text" class="input_date" maxlength="2"> 일</span>
             </div>
           </div>
           <div class="confirm_sign">
